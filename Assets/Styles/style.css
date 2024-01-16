@@ -1,0 +1,148 @@
+body {
+    display: flex;
+    flex-direction: column;
+}
+
+header {
+    display: flex;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+main {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button {
+    cursor: pointer;
+    background-color: #b0e3ec;
+    border-style: none;
+    padding: 4px 8px;
+    border-radius: 4px;
+}
+
+button:hover {
+    background-color: #a1d6e0;
+    transition: all 0.2s ease-in-out;
+}
+
+#start-screen {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    padding: 0px 20px;
+}
+
+#question-screen {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+    width: 60%;
+}
+
+#quiz-screen {
+    display: flex;
+    flex-direction: column;
+    row-gap: 20px;
+}
+
+#answer-container {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    row-gap: 10px;
+}
+
+.answer-btn {
+    width: fit-content;
+}
+
+#answer-status {
+    width: 100%;
+}
+
+#answer-status::after {
+    content: attr(data-status);
+}
+
+#highscores-container {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#highscores-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #131313;
+    opacity: 0.9;
+}
+
+#highscores-board {
+    display: flex;
+    flex-direction: column;
+    background-color: white;
+    min-height: 90%;
+    min-width: 90%;
+    z-index: 1;
+    border-radius: 4px;
+    padding: 10px 0px;
+}
+
+#highscores-board-header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+    padding: 10px 20px;
+}
+
+#highscores-board-header > h1 {
+    height: fit-content;
+}
+
+#exit-highscores-btn {
+    position: absolute;
+    top: 0;
+    right: 10px;
+}
+
+#highscores-list {
+    margin-top: 20px;
+}
+
+#highscores-list > li {
+    padding: 10px 20px;
+}
+
+#highscores-list > li:nth-child(odd) {
+    background-color: azure;
+}
+
+#highscores-clear-btn {
+    display: flex;
+    align-self: center;
+    width: fit-content;
+    margin-top: 20px;
+}
+
+/* Does not maintain space without being visible - Overrides current display */
+.display-none {
+    display: none !important;
+}
+
+/* Maintains space without being visible */
+.hidden {
+    visibility: hidden;
+}
