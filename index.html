@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./Assets/Styles/reset.css">
+    <link rel="stylesheet" href="./Assets/Styles/style.css">
+    <title>Quiz App</title>
+</head>
+<body>
+    <header>
+        <button id="highscores-btn">View Highscores</button>
+        <p>Time: <span id="time-left"></span></p>
+    </header>
+    <main>
+        <section id="start-screen">
+            <h1>Coding Quiz Challenge</h1>
+            <p>Try to answer the following code-related questions within the time limit. Keep in mind that incorrect answers will penalize your score/time by ten seconds!</p>
+            <button id="start-btn">Start Quiz</button>
+        </section>
+        <section id="quiz-screen" class="display-none">
+            <h1 id="question"></h1>
+            <ul id="answer-container"></ul>
+            <section id="answer-status" class="hidden">
+                <hr>
+            </section>
+        </section>
+        <section id="end-screen" class="display-none">
+            <h1>All done!</h1>
+            <p>Your final score is <span id="score"></span>%.</p>
+            <form id="submission-form">
+                <label for="initials">Enter initials:</label>
+                <input type="text" id="initials" name="initials" maxlength="3">
+                <button id="submit-score-btn">Submit</button>
+            </form>
+        </section>
+        <section id="highscores-container" class="display-none">
+            <section id="highscores-board">
+                <section id="highscores-board-header">
+                    <h1>Highscores</h1>
+                    <button id="exit-highscores-btn">Exit</button>
+                </section>
+                <ul id="highscores-list"></ul>
+                <button id="highscores-clear-btn">Clear Highscores</button>
+            </section>
+            <div id="highscores-overlay"></div>
+        </section>
+    </main>
+    <script src="Assets/Scripts/main.js"></script>
+</body>
+</html>
